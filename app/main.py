@@ -58,5 +58,16 @@ def load(payload: CheckRequest, _: None = Depends(verify_api_key)):
     return CheckResponse(exists=exists)
 
 
+@app.get(f"/debug/buffer")
+def show(_: None = Depends(verify_api_key)):
+    return Buffer.data
+
+
+@app.delete(f"/debug/buffer")
+def show(_: None = Depends(verify_api_key)):
+    Buffer.clear()
+    return Buffer.data
+
+
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=9990)
