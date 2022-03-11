@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    types: [opened, synchronize, reopened]
+  workflow_dispatch:
+
+jobs:
+  ci:
+    name: CI
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: |
+          apt-get update && apt-get install -y python3-pip
+          pip3 install -r requirements.txt
+
+      - name: Run tests
+        run: |
+          cd app
+          pytest
