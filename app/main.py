@@ -54,7 +54,7 @@ def load(payload: CheckRequest, _: None = Depends(verify_api_key)):
                 break
         else:
             pattern_index = 0
-    # Buffer.clear()
+    Buffer.clear()
     return CheckResponse(exists=exists)
 
 
