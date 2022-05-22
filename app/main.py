@@ -8,6 +8,8 @@ from fastapi.security.api_key import APIKeyHeader
 from starlette.middleware.cors import CORSMiddleware
 
 from models import LoadRequest, CheckRequest, CheckResponse
+from utils import send_greeting_on_slack
+
 
 MAX_LENGTH = 200
 
@@ -70,4 +72,5 @@ def show(_: None = Depends(verify_api_key)):
 
 
 if __name__ == "__main__":
+    send_greeting_on_slack()
     uvicorn.run(app, host="0.0.0.0", port=9990)
