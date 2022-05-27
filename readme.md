@@ -1,7 +1,10 @@
+`Please do not fork this repository! It is archived to prevent opening pull requests.`
+
 Hi!
 
 If you just found this repository while browsing github, there's nothing to see here really.
 However, if you have been given link to this repository, it means that you are participating in the recruitment process for Contractbook.
+
 It also means that congratulations are in order - you already passed the first interview and made it into a second stage.
 So: Congratulations! :tada:
 
@@ -25,4 +28,6 @@ Help the team. Do whatever you find necessary.
 
 You have been invited to a slack channel dedicated to the recruitment.
 
-Feel free to ask questions regarding this or any task on slack. 
+Feel free to ask questions regarding this or any task on slack.
+
+`Please do not fork this repository! It is archived to prevent opening pull requests.`
